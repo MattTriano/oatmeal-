@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<!--file:///home/matt/Desktop/test.html -->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    </head>
+    <body>
+    	<div id="theDiv"> PUT THIS IN YOUR OATMEAL </div>
+    	<div id="div2"></div>
+    	<div id="div3"></div>
+    	<script> $(document).ready(function(){
+    		var ingredients = ["peaches","cream","raisens","brown sugar","no more options"];
+    		$("#theDiv").click(function(){
+    			$("#div2").show(400);
+    			var index1 = Math.floor(Math.random()*ingredients.length);
+    			var index2 = Math.floor(Math.random()*ingredients.length);;
+    			while (index1 === index2){
+    				var index2 = Math.floor(Math.random()*ingredients.length);
+    			};
+    			$("#div2").html(ingredients[index1]);
+    			$("#div3").html(ingredients[index2]);
+    		})
+
+    		
+
+    	}) </script>
+    	<style> 
+    		#theDiv{
+    			font-size:50px;
+    			color:blue;
+    		}
+
+    		#div2{
+    			display:none;
+    		}
+    	</style>
+    </body>
+</html>
